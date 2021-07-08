@@ -1,0 +1,37 @@
+@model Producto
+<div>
+    <h2>Agregar Producto</h2>
+</div>
+<hr>
+<div asp-validation-summary="All"></div>
+<br>
+<form asp-action="AgregarProducto" method="POST">
+    <div class="form-group">
+        <label asp-for="NombreProducto">Nombre del Producto</label>
+        <input asp-for="NombreProducto" class="form-control">
+        <span asp-validation-for="NombreProducto" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Proveedor">Nombre de Proveedor</label>
+        <input asp-for="Proveedor" class="form-control">
+        <span asp-validation-for="Proveedor" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CantidadCajas">Cantidad de Cajas</label>
+        <input asp-for="CantidadCajas" class="form-control">
+        <span asp-validation-for="CantidadCajas" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PrecioPorCajas">Precio por Cajas</label>
+        <input asp-for="PrecioPorCajas" class="form-control">
+        <span asp-validation-for="PrecioPorCajas" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CantidadProductosPorCajas">Cantidad de productos por Cajas</label>
+        <input asp-for="CantidadProductosPorCajas" class="form-control">
+        <span asp-validation-for="CantidadProductosPorCajas" class="text-danger"></span>
+    </div>
+    <div>
+        <button class="btn btn-primary">Agregar Producto</button>
+    </div>
+</form>

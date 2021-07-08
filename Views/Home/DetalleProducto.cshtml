@@ -1,0 +1,72 @@
+@{
+    ViewData["Title"] = "Detalle";
+}
+@model Producto
+<div class="container">
+<h1>Detalle del Producto</h1>
+<div>
+    <h4>@Html.DisplayFor(model => model.NombreProducto)</h4>
+    <div class="total d-flex align-items-baseline text-center" style="border-top: 2px solid black;"></div>
+    <br>
+    <dl class="row">
+        <dt class = "col-sm-5">
+            Nombre del producto:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.NombreProducto)
+        </dd>
+        <dt class = "col-sm-5">
+            Proveedor:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.Proveedor)
+        </dd>
+        <dt class = "col-sm-5">
+            Fecha de registro:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+        <dt class = "col-sm-5">
+            Cantidad de Cajas:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.CantidadCajas)
+        </dd>
+        <dt class = "col-sm-5">
+            Precio por Cajas:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.PrecioPorCajas)
+        </dd>
+        <dt class = "col-sm-5">
+            Precio Total:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.PrecioTotal)
+        </dd>
+        <dt class = "col-sm-5">
+            Cantidad de productos por caja:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.CantidadProductosPorCajas)
+        </dd>
+        <dt class = "col-sm-5">
+            Cantidad de productos total:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.CantidadProductosTotal)
+        </dd>
+        <dt class = "col-sm-5">
+            Precio por producto:
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.PrecioPorProducto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditarProducto" asp-route-id="@Model.Id" class="btn btn-primary" >Editar el producto</a> |
+    <a asp-action="Index" class="btn btn-primary">Regresar</a>
+</div>
+</div>
